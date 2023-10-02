@@ -14,18 +14,10 @@ class Shop {
 List<Shop> shops = [
   Shop("assets/images/eos250.jpg", "Canon EOS 250D", 230.000,
       "Canon EOS 250D: This is a DSLR camera from Canon’s EOS series. It features a 24.1 megapixel sensor and has the ability to shoot 4K movies. It also includes a Dual Pixel CMOS AF system for superb autofocus when using Live View"),
-  Shop(
-      "assets/images/a6700.jpg",
-      "Sony A6700",
-      440.000,
-      ""
-          "The Sony A6700 is an ultra-compact digital SLR that features a 24MP APS-C-sized CMOS sensor, DIGIC 8 processor, and Dual Pixel autofocus system"),
-  Shop(
-      "assets/images/gfx100s.jpg",
-      "Fujifilm GFX 100s",
-      123.000,
-      ""
-          "This camera from Fujifilm’s GFX series is a mirrorless camera with a large, APS-C-size CMOS image sensor with approximately 102 million pixels. It provides a top sensitivity of ISO 25600"),
+  Shop("assets/images/a6700.jpg", "Sony A6700", 440.000,
+      "The Sony A6700 is an ultra-compact digital SLR that features a 24MP APS-C-sized CMOS sensor, DIGIC 8 processor, and Dual Pixel autofocus system"),
+  Shop("assets/images/gfx100s.jpg", "Fujifilm GFX 100s", 123.000,
+      "This camera from Fujifilm’s GFX series is a mirrorless camera with a large, APS-C-size CMOS image sensor with approximately 102 million pixels. It provides a top sensitivity of ISO 25600"),
   Shop("assets/images/lumix.jpg", "Lumix S23", 544.000,
       "Pro for Cinematographer"),
   Shop("assets/images/a7r5.jpg", "Sony A7RIV", 432.000,
@@ -37,7 +29,7 @@ List<Shop> shops = [
   Shop("assets/images/xpro3.jpg", "Fujifilm X-Pro 3", 55.000,
       "The Fujifilm X-Pro3 is a unique mirrorless camera with a hybrid viewfinder and LCD that is only viewable when flipped down. It uses an APS-C X-Trans CMOS 4 sensor with primary color filter"),
   Shop("assets/images/r3.jpg", "Canon EOS R3", 11.000,
-      "The Canon EOS R3 is a high-end full-frame mirrorless camera designed for sports, wildlife, and photojournalism. It uses a 24MP Stacked CMOS sensor and a Digic X processor")
+      "The Canon EOS R3 is a high-end full-frame mirrorless camera designed for sports, wildlife, and photojournalism. It uses a 24MP Stacked CMOS sensor and a Digic X processor"),
 ];
 
 class ShopScreen extends StatelessWidget {
@@ -59,14 +51,17 @@ class ShopScreen extends StatelessWidget {
               Toast.show("Search Button",
                   duration: Toast.lengthShort, gravity: Toast.bottom);
             },
-            icon: const Icon(Icons.search, color: Colors.white,),
+            icon: const Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
           ),
           IconButton(
             onPressed: () {
               Toast.show("Cart Button",
                   duration: Toast.lengthShort, gravity: Toast.bottom);
             },
-            icon: const Icon(Icons.shopping_bag_outlined,color: Colors.white),
+            icon: const Icon(Icons.shopping_bag_outlined, color: Colors.white),
           ),
         ],
       ),

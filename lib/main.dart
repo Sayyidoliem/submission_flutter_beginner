@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Online Shop',
-      theme: ThemeData(
+      theme: ThemeData( 
         useMaterial3: true,
       ),
       home: const ShopScreen(),
